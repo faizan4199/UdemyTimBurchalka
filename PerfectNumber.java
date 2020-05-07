@@ -21,21 +21,24 @@ package com.TimBuchalka;
 //* isPerfectNumber(-1); should return false since the number is < 1
 
 public class PerfectNumber {
-    public static boolean isPerfectNumber (int number) {
-        int count =0;
+   	public static boolean isPerfectNumber (int number) {
+		
+		int i=1;
+		int sum=0;
+	    if(number>0) {
+		while(i<=number/2)
+	    {
+	       if(number%i==0)
+	       {
+		sum+=i;
+	       }
+	      i++;
+	    }
+	if(sum==number)
+	{
+	return true;
+               } }
 
-        if(number > 0) {
-            for (int i = 1; i < number; i++) {
-                if (number % i == 0) {
-                    count = count + i;
-                }
-            }
-        }
-
-        if(count > 1) {
-            System.out.println(count);
-        }
-
-        return false;
-    }
+	return false;
+	}
 }
