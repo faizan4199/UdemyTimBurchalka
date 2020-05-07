@@ -22,7 +22,7 @@ public class GreatestCommonDevisor {
     public static int getGreatestCommonDivisor (int first, int second) {
         int greatest = 0;
 
-        if(first > 10 && second > 10){
+        if(first > 9 && second > 9){
 
             for(int i = 1; ((i <= first) && (i <=second)); i++ ){
                 if((first % i == 0) && (second % i == 0)){
@@ -31,7 +31,7 @@ public class GreatestCommonDevisor {
             }
             System.out.println(greatest);
 
-        return 1;
+        return greatest;
 
         } else
             System.out.println("-1");
